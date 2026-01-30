@@ -5,7 +5,7 @@ import { generateText, streamText } from "ai";
 const baseURL = process.env.AZURE_ANTHROPIC_BASE_URL || "";
 const apiKey = process.env.AZURE_ANTHROPIC_API_KEY || "";
 const modelId =
-  process.env.AZURE_ANTHROPIC_MODEL_ID || "fwdt-claude-sonnet-4-5";
+  process.env.AZURE_ANTHROPIC_MODEL_ID || "claude-sonnet-4-5-20251001";
 if (!apiKey || !baseURL || !modelId) {
   throw new Error(
     "AZURE_ANTHROPIC_BASE_URL and AZURE_ANTHROPIC_API_KEY and AZURE_ANTHROPIC_MODEL_ID are required"

@@ -1,7 +1,26 @@
 {
-  "name": "anthropic-azure-provider",
+  "name": "@karimdaw/anthropic-azure-provider",
   "version": "1.0.0",
   "description": "Azure Anthropic provider for Vercel AI SDK v5",
+  "keywords": [
+    "anthropic",
+    "azure",
+    "ai-sdk",
+    "vercel",
+    "claude",
+    "llm",
+    "ai"
+  ],
+  "homepage": "https://github.com/karim-daw/anthropic-azure-provider#readme",
+  "bugs": {
+    "url": "https://github.com/karim-daw/anthropic-azure-provider/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karim-daw/anthropic-azure-provider.git"
+  },
+  "license": "MIT",
+  "author": "Karim Daw",
   "type": "module",
   "exports": {
     ".": {
@@ -16,8 +35,10 @@
     }
   },
   "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "directories": {
+    "test": "tests"
+  },
   "files": [
     "dist"
   ],
@@ -33,37 +54,24 @@
     "example": "npm run build && npx tsx src/example/index.ts",
     "example:run": "npx tsx src/example/index.ts"
   },
-  "peerDependencies": {
-    "@ai-sdk/provider": "^3.0.0"
-  },
   "dependencies": {
-    "@anthropic-ai/foundry-sdk": "^0.2.0",
-    "ai": "^6.0.62"
+    "@anthropic-ai/foundry-sdk": "^0.2.0"
   },
   "devDependencies": {
     "@ai-sdk/provider": "^3.0.0",
-    "dotenv": "^16.4.0",
+    "@karimdaw/anthropic-azure-provider": "^1.0.0",
     "@types/node": "^20.0.0",
+    "ai": "^6.0.62",
+    "dotenv": "^16.4.0",
     "tsup": "^8.0.0",
     "typescript": "^5.4.0",
     "vitest": "^2.0.0"
   },
+  "peerDependencies": {
+    "@ai-sdk/provider": "^3.0.0"
+  },
   "engines": {
     "node": ">=18"
   },
-  "keywords": [
-    "anthropic",
-    "azure",
-    "ai-sdk",
-    "vercel",
-    "claude",
-    "llm",
-    "ai"
-  ],
-  "author": "Karim Daw",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/karim-daw/anthropic-azure-provider"
-  }
+  "module": "./dist/index.js"
 }

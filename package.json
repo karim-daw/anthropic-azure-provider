@@ -1,6 +1,6 @@
 {
   "name": "@karimdaw/anthropic-azure-provider",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Azure Anthropic provider for Vercel AI SDK v5",
   "keywords": [
     "anthropic",

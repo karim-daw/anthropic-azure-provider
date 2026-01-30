@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { createAzureAnthropic } from "anthropic-azure-provider";
+import { createAzureAnthropic } from "@karimdaw/anthropic-azure-provider";
 import { generateText, streamText } from "ai";
 
 const baseURL = process.env.AZURE_ANTHROPIC_BASE_URL || "";
@@ -20,13 +20,13 @@ const provider = createAzureAnthropic({
 async function main() {
   console.log(`[PROVIDER] Using model: ${modelId}`);
   console.log(`[PROVIDER] Using baseURL: ${baseURL}`);
-  // console.log("[PROVIDER] starting generateText");
-  // const { text } = await generateText({
-  //   model: provider(modelId),
-  //   prompt: "Explain quantum computing in simple terms.",
-  // });
-  // console.log("[PROVIDER] Generated text: \n", text);
-  // console.log("[PROVIDER] finished generateText");
+  console.log("[PROVIDER] starting generateText");
+  const { text } = await generateText({
+    model: provider(modelId),
+    prompt: "Explain quantum computing in simple terms.",
+  });
+  console.log("[PROVIDER] Generated text: \n", text);
+  console.log("[PROVIDER] finished generateText");
 
   console.log("[PROVIDER] starting streamText");
   const textStream = streamText({
